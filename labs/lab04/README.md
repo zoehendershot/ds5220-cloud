@@ -412,8 +412,8 @@ def launch_ec2_instance(instance_type, ami_id, key_name, security_group, instanc
     sleep 10
     docker run -d --restart=always -p 8888:8888 quay.io/jupyter/base-notebook start-notebook.py --NotebookApp.token='my-token'
     
-    # Test S3 access
-    aws s3 ls s3://{bucket_name}/ > /var/www/html/s3-test.txt 2>&1
+    # Test S3 access by copying a file
+    aws s3 cp /var/log/apt/history.log s3://{bucket_name}/
     """
     
     try:
