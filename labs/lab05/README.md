@@ -1,4 +1,4 @@
-# Lab: Event-Driven Architecture with AWS SNS and S3
+# Lab: Event-Driven Architecture with SNS and S3
 
 ## Overview
 
